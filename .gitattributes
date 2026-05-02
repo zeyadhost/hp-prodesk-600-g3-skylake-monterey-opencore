@@ -1,0 +1,10 @@
+*.plist text eol=lf
+*.strings text eol=lf
+*.md text eol=lf
+*.efi binary
+*.aml binary
+*.kext/** binary
+*.icns binary
+*.png binary
+*.bin binary
+*.mp3 binary
