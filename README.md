@@ -45,12 +45,18 @@ Audio: alcid=23 for Conexant CX20632
 XhciPortLimit: false
 UnblockFsConnect: true
 CtlnaAHCIPort.kext: disabled
+SSDT-AWAC.aml: enabled
+SSDT-RHUB.aml: disabled
+IgnoreInvalidFlexRatio: true
+AllowNvramReset: true
+RealtekRTL8111.kext: disabled
+CpuTscSync.kext: disabled
 ```
 
-The current boot args are intentionally verbose while debugging installation:
+The current boot args are intentionally minimal while testing Recovery boot:
 
 ```text
--v keepsyms=1 debug=0x100 igfxonln=1 -igfxblr -cfdon alcid=23 npci=0x2000
+alcid=23 npci=0x2000
 ```
 
 If audio does not work after installation, try `alcid=20` or `alcid=28`.

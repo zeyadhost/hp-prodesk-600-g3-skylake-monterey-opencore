@@ -10,6 +10,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>SSDT-AWAC.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-AWAC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>SSDT-EC-USBX.aml</string>
 				<key>Enabled</key>
 				<true/>
@@ -36,7 +44,7 @@
 				<key>Comment</key>
 				<string>SSDT-RHUB.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-RHUB.aml</string>
 			</dict>
@@ -370,7 +378,7 @@
 				<key>Comment</key>
 				<string>RealtekRTL8111.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RealtekRTL8111</string>
 				<key>MaxKernel</key>
@@ -442,7 +450,7 @@
 				<key>Comment</key>
 				<string>CpuTscSync.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/CpuTscSync</string>
 				<key>MaxKernel</key>
@@ -645,7 +653,7 @@
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
-			<false/>
+			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
 			<key>AllowToggleSip</key>
@@ -749,7 +757,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 igfxonln=1 -igfxblr -cfdon alcid=23 npci=0x2000</string>
+				<string>alcid=23 npci=0x2000</string>
 				<key>csr-active-config</key>
 				<data>
 				AAAAAA==
@@ -1206,7 +1214,7 @@
 			<key>ForgeUefiSupport</key>
 			<false/>
 			<key>IgnoreInvalidFlexRatio</key>
-			<false/>
+			<true/>
 			<key>ReleaseUsbOwnership</key>
 			<true/>
 			<key>ReloadOptionRoms</key>
