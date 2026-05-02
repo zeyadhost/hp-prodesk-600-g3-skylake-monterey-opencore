@@ -41,6 +41,9 @@ Key choices:
 
 ```text
 AAPL,ig-platform-id: 00001219
+framebuffer-stolenmem: 00003001
+framebuffer-fbmem: 00009000
+framebuffer-unifiedmem: 00000080
 Audio: alcid=23 for Conexant CX20632
 XhciPortLimit: false
 UnblockFsConnect: true
@@ -49,14 +52,16 @@ SSDT-AWAC.aml: enabled
 SSDT-RHUB.aml: disabled
 IgnoreInvalidFlexRatio: true
 AllowNvramReset: true
+DisableRtcChecksum: true
+RTCMemoryFixup.kext: enabled
 RealtekRTL8111.kext: disabled
 CpuTscSync.kext: disabled
 ```
 
-The current boot args are intentionally minimal while testing Recovery boot:
+The current boot args are intentionally verbose while testing the graphics handoff and RTC fix:
 
 ```text
-alcid=23 npci=0x2000
+-v keepsyms=1 debug=0x100 alcid=23 npci=0x2000 -wegnoegpu rtcfx_exclude=00-FF
 ```
 
 If audio does not work after installation, try `alcid=20` or `alcid=28`.
