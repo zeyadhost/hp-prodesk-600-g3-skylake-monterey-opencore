@@ -58,11 +58,13 @@ RealtekRTL8111.kext: disabled
 CpuTscSync.kext: disabled
 ```
 
-The current boot args are intentionally verbose while testing the graphics handoff and RTC fix:
+The current boot args are intentionally verbose while testing Recovery boot over VGA and the RTC fix:
 
 ```text
--v keepsyms=1 debug=0x100 alcid=23 npci=0x2000 -wegnoegpu rtcfx_exclude=00-FF
+-v keepsyms=1 debug=0x100 alcid=23 npci=0x2000 -igfxvesa rtcfx_exclude=00-FF
 ```
+
+VGA is only a workaround path on Intel HD 530. HDMI or DisplayPort is strongly recommended for proper acceleration. If you must use a VGA-only monitor, keep `-igfxvesa` for installation, expect limited resolution/no acceleration, and switch to HDMI/DisplayPort later if possible.
 
 If audio does not work after installation, try `alcid=20` or `alcid=28`.
 
